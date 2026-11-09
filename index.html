@@ -1,0 +1,685 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>A Special Surprise ♡</title>
+
+        <!-- Our CSS -->
+        <link rel="stylesheet" href="style.css">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <main class="website">
+
+            <!-- =================================
+                SECTION 1: PASSCODE LANDING PAGE
+            ================================== -->
+
+            <section id="login-screen" class="screen login-screen">
+
+                <!-- Fake Browser Header -->
+                <header class="browser-bar">
+                    <div class="browser-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="browser-title">
+                        ♥ A Special Surprise...
+                    </div>
+                </header>
+
+
+                <!-- Main Landing Page -->
+                <div class="landing-content">
+
+                    <!-- LEFT SIDE -->
+                    <div class="illustration-side">
+
+                        <div class="birthday-note">
+                            Happy Birthday<br>
+                            my love ♡
+                        </div>
+
+                        <div class="couple-frame">
+
+                            <!-- Our couple illustration goes here -->
+                            <img
+                                src="assets/couple.jpg"
+                                alt="Our special couple illustration"
+                                class="couple-image"
+                            >
+
+                        </div>
+
+                        <div class="little-note">
+                            A little surprise<br>
+                            just for you... ♡
+                        </div>
+
+                        <!-- Decorations -->
+                        <span class="decoration heart-one">♡</span>
+                        <span class="decoration star-one">✦</span>
+                        <span class="decoration star-two">✧</span>
+                        <span class="decoration heart-two">♥</span>
+
+                    </div>
+
+
+                    <!-- RIGHT SIDE: KEYPAD -->
+                    <div class="passcode-side">
+
+                        <div class="passcode-container">
+
+                            <h1>Enter your passcode</h1>
+
+                            <p class="passcode-subtitle">
+                                A little secret between us ♡
+                            </p>
+
+
+                            <!-- Four Passcode Boxes -->
+                            <div class="passcode-display">
+
+                                <div class="passcode-dot"></div>
+                                <div class="passcode-dot"></div>
+                                <div class="passcode-dot"></div>
+                                <div class="passcode-dot"></div>
+
+                            </div>
+
+
+                            <!-- Error Message -->
+                            <p id="error-message" class="error-message">
+                                Oops! Try again, lovely ♡
+                            </p>
+
+
+                            <!-- Number Keypad -->
+                            <div class="keypad">
+
+                                <button class="key" data-number="1">1</button>
+                                <button class="key" data-number="2">2</button>
+                                <button class="key" data-number="3">3</button>
+
+                                <button class="key" data-number="4">4</button>
+                                <button class="key" data-number="5">5</button>
+                                <button class="key" data-number="6">6</button>
+
+                                <button class="key" data-number="7">7</button>
+                                <button class="key" data-number="8">8</button>
+                                <button class="key" data-number="9">9</button>
+
+                                <button class="key special-key" data-action="clear">✕</button>
+                                <button class="key" data-number="0">0</button>
+                                <button class="key special-key" data-action="backspace">⌫</button>
+
+                            </div>
+
+                            <p class="keypad-footer">
+                                Only you know this little pass ♥
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                SECTION 2: BIRTHDAY CELEBRATION
+            ================================== -->
+
+            <section id="birthday-screen" class="screen birthday-screen hidden">
+
+                <!-- Balloons will be created here -->
+                <div id="balloon-container"></div>
+
+
+                <!-- Birthday Message -->
+                <div class="birthday-message">
+
+                    <div class="message-decoration">♡ ✦ ♡</div>
+
+                    <h1 class="welcome-title">
+                        Well, well, well...
+                    </h1>
+
+                    <h2>
+                        You made it!
+                    </h2>
+
+                    <p class="birthday-text">
+                        Happy 28th birthday, Sugar Bum.
+                    </p>
+
+                    <p class="surprise-text">
+                        But your surprises are not here yet.
+                        You're about to find them.
+                    </p>
+
+                    <div class="message-decoration bottom-decoration">
+                        Made with love, just for you Honey ♡
+                    </div>
+
+
+                    <!-- Continue Button -->
+                    <button id="continue-button" class="continue-button">
+                        Let's find your surprises ♡
+                    </button>
+
+                </div>
+
+            </section>
+
+
+        
+    <!-- LEVEL 1: THE 28 LITTLE SECRETS -->
+    <section id="treasure-screen" class="screen treasure-screen hidden">
+
+        <div class="scrapbook-browser">
+            <div class="browser-dots"><span></span><span></span><span></span></div>
+            <div class="browser-title">♥ A little world made for you...</div>
+        </div>
+
+        <div class="secret-world">
+
+            <div class="secret-heading">
+                <span class="secret-eyebrow">YOUR NEXT LITTLE ADVENTURE</span>
+                <h1>My 28 Little Messages for you!</h1>
+                <p>
+                    I have hidden 28 little pieces of my thoughts here.
+                    Find every message and see what they build together.
+                </p>
+            </div>
+
+            <div class="key-progress">
+                <div class="key-progress-text">
+                    <span>Building your special key</span>
+                    <strong id="secret-count">0 / 28</strong>
+                </div>
+                <div class="key-progress-track">
+                    <div id="secret-progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="key-display-area">
+
+                <div class="key-paper-note">
+                    <span>✦ A little something for you ✦</span>
+                    <p>Every message is a piece of the key.</p>
+                </div>
+
+                <svg id="heart-key" viewBox="0 0 300 270"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img" aria-label="A heart-shaped key being assembled">
+
+                    <path class="key-outline"
+                        d="M150 105
+                        C130 83 70 49 70 95
+                        C70 125 115 155 150 180
+                        C185 155 230 125 230 95
+                        C230 49 170 83 150 105 Z" />
+
+                    <path class="key-outline"
+                        d="M150 177 L150 244 L179 244 L179 230 L165 230 L165 218 L179 218 L179 205 L150 205" />
+
+                    <g id="key-points"></g>
+
+                    <text x="150" y="263" class="key-svg-label"
+                        text-anchor="middle">MADE WITH LOVE</text>
+                </svg>
+
+                <div class="key-caption">
+                    <span>♡</span>
+                    <span>28 little pieces. One special key.</span>
+                    <span>♡</span>
+                </div>
+
+            </div>
+
+            <div class="secret-instruction">
+                <span class="instruction-star">✦</span>
+                Choose a little message to open.
+                <span class="instruction-star">✦</span>
+            </div>
+
+            <div id="secret-grid" class="secret-grid"></div>
+
+            <div id="secret-message" class="secret-message hidden">
+                <span class="message-flower">♡ ✦ ♡</span>
+                <p id="secret-number" class="secret-number"></p>
+                <h2 id="secret-title"></h2>
+                <p id="secret-text"></p>
+                <button id="close-secret" class="scrapbook-button">
+                    Back to the little messages
+                </button>
+            </div>
+
+            <div id="key-complete" class="key-complete hidden">
+                <div class="complete-decoration">✦ ♡ ✦</div>
+                <h2>You found all 28!</h2>
+                <p>
+                    Every little message has become a part of something.
+                    Your heart-shaped key is finally complete.
+                </p>
+                <button id="open-door-button" class="scrapbook-button">
+                    Let's open the door ♡
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- LEVEL 2: THE SECRET DOOR -->
+    <section id="door-screen" class="screen door-screen hidden">
+
+        <div class="scrapbook-browser">
+            <div class="browser-dots"><span></span><span></span><span></span></div>
+            <div class="browser-title">♥ One last little door...</div>
+        </div>
+
+        <div class="door-room-environment">
+            <!-- Wall decor with warm sconces, wainscoting and baseboard -->
+            <div class="room-wall">
+                <div class="wall-sconce sconce-left">
+                    <div class="sconce-fixture"></div>
+                    <div class="sconce-candle">
+                        <span class="sconce-wick"></span>
+                        <span class="sconce-flame"></span>
+                        <span class="sconce-glow"></span>
+                    </div>
+                </div>
+                <div class="wall-sconce sconce-right">
+                    <div class="sconce-fixture"></div>
+                    <div class="sconce-candle">
+                        <span class="sconce-wick"></span>
+                        <span class="sconce-flame"></span>
+                        <span class="sconce-glow"></span>
+                    </div>
+                </div>
+                <div class="wall-wainscoting"></div>
+                <div class="wall-baseboard"></div>
+            </div>
+
+            <!-- Polished wooden floor with perspective and doorway light spill -->
+            <div class="room-floor">
+                <div class="floor-planks"></div>
+                <div class="door-light-cast" id="door-light-cast"></div>
+            </div>
+
+            <div class="door-content">
+                <span class="door-eyebrow">YOUR KEY HAS FOUND ITS HOME</span>
+
+                <h1>Something is waiting inside...</h1>
+
+                <p id="door-status-text">
+                    You found every little piece. Now it's time to see
+                    what I've been keeping behind this door.
+                </p>
+
+                <div class="magical-door-area">
+                    <!-- Stately Archway Frame with carved keystone -->
+                    <div class="door-arch-frame">
+                        <div class="arch-keystone">♡</div>
+                    </div>
+
+                    <!-- Room vista behind the door (seen when door opens - natural room view) -->
+                    <div class="door-room-vista">
+                        <div class="vista-room-wall">
+                            <div class="vista-fairy-lights">
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                            <div class="vista-bunting">
+                                <i class="v-flag v-1"></i>
+                                <i class="v-flag v-2"></i>
+                                <i class="v-flag v-3"></i>
+                                <i class="v-flag v-4"></i>
+                            </div>
+                            <div class="vista-cake-glow">
+                                <div class="vista-cake-shape"></div>
+                                <div class="vista-candles-glow">✦ ✦ ✦</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- The Door (Bigger Size for Natural Opening Effect) -->
+                    <div class="magical-door" id="magical-door">
+                        <div class="door-panel">
+                            <div class="door-panel-border"></div>
+                            <div class="door-heart">♡</div>
+                            <div class="door-lockplate">
+                                <div class="door-knob"></div>
+                                <div class="door-keyhole" id="door-keyhole">♥</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ground shadow anchoring door to floor -->
+                    <div class="door-shadow"></div>
+
+                    <!-- Sparkles burst when key unlocks the door -->
+                    <div class="key-unlock-sparks" id="key-unlock-sparks">
+                        <span class="spark s1">✦</span>
+                        <span class="spark s2">✧</span>
+                        <span class="spark s3">✦</span>
+                        <span class="spark s4">✧</span>
+                        <span class="spark s5">✦</span>
+                        <span class="spark s6">✧</span>
+                    </div>
+
+                    <!-- Animated Flying Heart Key -->
+                    <div class="flying-door-key hidden" id="flying-door-key">
+                        <svg viewBox="0 0 300 300" class="mini-heart-key-svg">
+                            <path class="flying-key-path" d="M150,105 C137,94 103,77 86,80 C77,94 82,111 95,126 C111,141 150,169 150,169 C150,169 189,141 205,126 C218,111 223,94 214,80 C197,77 163,94 150,105 Z M150,169 L150,242 M150,182 L176,182 M150,194 L176,194" fill="none" stroke="#F3B36C" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="150" cy="105" r="5" fill="#F37121"/>
+                            <circle cx="86" cy="80" r="5" fill="#F37121"/>
+                            <circle cx="95" cy="126" r="5" fill="#F37121"/>
+                            <circle cx="205" cy="126" r="5" fill="#F37121"/>
+                            <circle cx="214" cy="80" r="5" fill="#F37121"/>
+                            <circle cx="150" cy="242" r="6" fill="#F37121"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <p class="door-hint">Your little heart key fits perfectly...</p>
+
+                <button id="turn-key-button" class="scrapbook-button" style="display:none !important;">
+                    Turn the key and enter ♡
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- LEVEL 3: THE BIRTHDAY ROOM -->
+    <section id="cake-screen" class="screen cake-screen hidden">
+
+        <div class="scrapbook-browser">
+            <div class="browser-dots"><span></span><span></span><span></span></div>
+            <div class="browser-title">♥ The birthday room</div>
+        </div>
+
+        <!-- The Celebration Room Environment -->
+        <div class="cake-room-environment">
+            <!-- Room walls with wallpaper, fairy lights, bunting, balloons and wainscoting -->
+            <div class="cake-room-wall">
+                <!-- Festive fairy lights -->
+                <div class="cake-fairy-lights">
+                    <span class="fairy-bulb b1"></span>
+                    <span class="fairy-bulb b2"></span>
+                    <span class="fairy-bulb b3"></span>
+                    <span class="fairy-bulb b4"></span>
+                    <span class="fairy-bulb b5"></span>
+                    <span class="fairy-bulb b6"></span>
+                    <span class="fairy-bulb b7"></span>
+                    <span class="fairy-bulb b8"></span>
+                </div>
+
+                <!-- Bunting pennants in theme colors -->
+                <div class="cake-bunting-garland">
+                    <span class="bunting-flag flag-beige"></span>
+                    <span class="bunting-flag flag-orange"></span>
+                    <span class="bunting-flag flag-violet"></span>
+                    <span class="bunting-flag flag-gold"></span>
+                    <span class="bunting-flag flag-rose"></span>
+                    <span class="bunting-flag flag-beige"></span>
+                    <span class="bunting-flag flag-orange"></span>
+                    <span class="bunting-flag flag-violet"></span>
+                </div>
+
+                <!-- Keepsake Polaroid frames with real photos hanging on the walls -->
+                <!-- Left Wall Gallery -->
+                <div class="wall-frame frame-left-1" data-photo-idx="0" title="Click to view full photo ♡">
+                    <div class="frame-pin">✦</div>
+                    <div class="frame-polaroid">
+                        <div class="polaroid-img-wrap">
+                            <img src="assets/photo1.jpg" alt="Us" class="polaroid-img">
+                        </div>
+                        <p class="polaroid-caption">Us ♡</p>
+                    </div>
+                </div>
+
+                <div class="wall-frame frame-left-2" data-photo-idx="1" title="Click to view full photo ✨">
+                    <div class="frame-pin">✦</div>
+                    <div class="frame-polaroid">
+                        <div class="polaroid-img-wrap">
+                            <img src="assets/photo2.jpg" alt="Birthday Boy" class="polaroid-img">
+                        </div>
+                        <p class="polaroid-caption">Birthday Boy ✨</p>
+                    </div>
+                </div>
+
+                <div class="wall-frame frame-left-3" data-photo-idx="3" title="Click to view full photo ✦">
+                    <div class="frame-pin">✦</div>
+                    <div class="frame-polaroid">
+                        <div class="polaroid-img-wrap">
+                            <img src="assets/photo4.jpg" alt="Pure Joy" class="polaroid-img">
+                        </div>
+                        <p class="polaroid-caption">Pure Joy ✦</p>
+                    </div>
+                </div>
+
+                <!-- Right Wall Gallery -->
+                <div class="wall-frame frame-right-1" data-photo-idx="4" title="Click to view full photo ♡">
+                    <div class="frame-pin">✦</div>
+                    <div class="frame-polaroid">
+                        <div class="polaroid-img-wrap">
+                            <img src="assets/photo5.jpg" alt="Forever & Always" class="polaroid-img">
+                        </div>
+                        <p class="polaroid-caption">Forever & Always ♡</p>
+                    </div>
+                </div>
+
+                <div class="wall-frame frame-right-2" data-photo-idx="2" title="Click to view full photo ♥">
+                    <div class="frame-pin">✦</div>
+                    <div class="frame-polaroid">
+                        <div class="polaroid-img-wrap">
+                            <img src="assets/photo3.jpg" alt="My Favorite Smile" class="polaroid-img">
+                        </div>
+                        <p class="polaroid-caption">Smile Baby ♥</p>
+                    </div>
+                </div>
+
+                <!-- Anchored Balloon Bouquets standing properly in the room corners -->
+                <div class="balloon-bouquet bouquet-left">
+                    <div class="balloon-cluster">
+                        <span class="bouquet-balloon b-orange"></span>
+                        <span class="bouquet-balloon b-beige"></span>
+                        <span class="bouquet-balloon b-gold"></span>
+                        <span class="bouquet-balloon b-rose"></span>
+                    </div>
+                    <div class="bouquet-ribbons"></div>
+                    <div class="bouquet-weight">
+                        <div class="corner-gift gift-gold">
+                            <span class="gift-ribbon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="balloon-bouquet bouquet-right">
+                    <div class="balloon-cluster">
+                        <span class="bouquet-balloon b-violet"></span>
+                        <span class="bouquet-balloon b-cream"></span>
+                        <span class="bouquet-balloon b-gold"></span>
+                        <span class="bouquet-balloon b-orange"></span>
+                    </div>
+                    <div class="bouquet-ribbons"></div>
+                    <div class="bouquet-weight">
+                        <div class="corner-gift gift-cream">
+                            <span class="gift-ribbon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wainscoting and Baseboard -->
+                <div class="cake-room-wainscoting"></div>
+                <div class="cake-room-baseboard"></div>
+            </div>
+
+            <!-- Polished wooden floor with celebration table rug -->
+            <div class="cake-room-floor">
+                <div class="cake-floor-wood"></div>
+                <div class="cake-table-rug"></div>
+            </div>
+
+            <div class="cake-content">
+
+                <span class="cake-eyebrow"></span>
+
+                <h1>Happy 28th Birthday!</h1>
+
+                <p class="cake-intro">
+                    I wish I could put every beautiful thing in the world
+                    into this little room for you.
+                </p>
+
+                <div class="cake-stage">
+
+                    <div class="cake-sparkle sparkle-one">✦</div>
+                    <div class="cake-sparkle sparkle-two">✧</div>
+                    <div class="cake-sparkle sparkle-three">♡</div>
+
+                    <div class="birthday-cake">
+
+        <!-- Golden stand / plate -->
+        <div class="cake-plate"></div>
+
+        <!-- Lower tier -->
+        <div class="cake-lower">
+            <div class="lower-body">
+                <!-- Frosting garlands across lower tier -->
+                <div class="cake-garlands lower-garlands">
+                    <span class="garland-swag swag-1"></span>
+                    <span class="garland-swag swag-2"></span>
+                    <span class="garland-swag swag-3"></span>
+                    <span class="gold-stud stud-1">✦</span>
+                    <span class="gold-stud stud-2">✦</span>
+                    <span class="gold-stud stud-3">✦</span>
+                    <span class="gold-stud stud-4">✦</span>
+                </div>
+                <!-- Edible gold leaf specks -->
+                <div class="gold-leaf-specks lower-specks">
+                    <span class="gold-flake f1"></span>
+                    <span class="gold-flake f2"></span>
+                    <span class="gold-flake f3"></span>
+                    <span class="gold-flake f4"></span>
+                </div>
+            </div>
+            <div class="lower-top">
+                <!-- Cream rosettes on the exposed lower shelf -->
+                <div class="shelf-rosettes">
+                    <span class="cream-rosette r1"><i class="gold-pearl"></i></span>
+                    <span class="cream-rosette r2"><i class="gold-pearl"></i></span>
+                    <span class="cream-rosette r3"><i class="gold-pearl"></i></span>
+                    <span class="cream-rosette r4"><i class="gold-pearl"></i></span>
+                    <span class="cream-rosette r5"><i class="gold-pearl"></i></span>
+                    <span class="cream-rosette r6"><i class="gold-pearl"></i></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Upper tier -->
+        <div class="cake-upper">
+            <div class="upper-body">
+                <!-- Frosting garlands across upper tier -->
+                <div class="cake-garlands upper-garlands">
+                    <span class="garland-swag swag-1"></span>
+                    <span class="garland-swag swag-2"></span>
+                    <span class="gold-stud stud-1">✦</span>
+                    <span class="gold-stud stud-2">✦</span>
+                    <span class="gold-stud stud-3">✦</span>
+                </div>
+                <!-- Edible gold leaf specks -->
+                <div class="gold-leaf-specks upper-specks">
+                    <span class="gold-flake f1"></span>
+                    <span class="gold-flake f2"></span>
+                    <span class="gold-flake f3"></span>
+                </div>
+                <!-- Pearl border where upper tier sits on lower tier -->
+                <div class="pearl-border upper-pearls"></div>
+            </div>
+            <div class="upper-top">
+                <!-- Scalloped delicate rim piping around upper edge -->
+                <div class="upper-rim-piping"></div>
+            </div>
+        </div>
+
+        <!-- 28 candles placed by JavaScript -->
+        <div class="candle-area"></div>
+
+    </div>
+
+
+            </div>
+
+            <h2 class="wish-heading">Make a wish, my love.</h2>
+
+            <p id="wish-instruction">
+                Make your wish, and blow out your candle.
+            </p>
+
+            <button id="blow-candle-button" class="scrapbook-button">
+                Blow out the candle ♡
+            </button>
+
+            <div id="birthday-wish-reveal" class="birthday-wish-reveal hidden">
+                <div class="wish-congrats">I hope every one of your wishes comes true. ♡</div>
+                <div class="wish-decoration"></div>
+                <h2>Your wish is yours to keep.</h2>
+                <p>
+                    And my wish? That life gives you a thousand reasons
+                    to smile, that you keep becoming everything you dream
+                    of, and that I get to celebrate many more birthdays
+                    beside you.
+                </p>
+                <p class="wish-signature">With all my love, always. ♡</p>
+            </div>
+
+            </div>
+        </div>
+
+        <!-- Interactive Polaroid Photo Lightbox Modal -->
+        <div id="photo-modal" class="photo-modal hidden">
+            <div class="photo-modal-backdrop" id="photo-modal-backdrop"></div>
+            <div class="photo-modal-card">
+                <button class="photo-modal-close" id="photo-modal-close" aria-label="Close photo">✕</button>
+                <button class="photo-nav-btn photo-prev" id="photo-modal-prev" aria-label="Previous photo">‹</button>
+                <div class="photo-modal-frame">
+                    <div class="modal-img-wrap">
+                        <img id="photo-modal-img" src="assets/photo1.jpg" alt="Photo of us" class="modal-large-img">
+                    </div>
+                    <p id="photo-modal-caption" class="modal-caption">Us ♡</p>
+                    <span class="modal-counter" id="photo-modal-counter">1 / 5</span>
+                </div>
+                <button class="photo-nav-btn photo-next" id="photo-modal-next" aria-label="Next photo">›</button>
+            </div>
+        </div>
+    </section>
+
+
+        </main>
+
+
+        <!-- Our JavaScript -->
+        <script src="script.js"></script>
+
+    </body>
+    </html>
